@@ -57,7 +57,10 @@ return require('packer').startup(function(use)
   use { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" } }
 
   -- TreeSitter
-  use { "nvim-treesitter/nvim-treesitter", run = ':TSUpdate' }
+	use {
+		"nvim-treesitter/nvim-treesitter",
+		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+	}
 
   -- Nvim Surroud
   use({
