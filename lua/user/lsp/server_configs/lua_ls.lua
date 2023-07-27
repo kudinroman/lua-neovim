@@ -1,7 +1,9 @@
 return {
-    Lua = {
-        runtime = {
-            version = "Lua 5.1"
-        }
-    }
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
 }

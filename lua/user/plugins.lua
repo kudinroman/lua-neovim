@@ -57,10 +57,7 @@ return require('packer').startup(function(use)
   use { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" } }
 
   -- TreeSitter
-	use {
-		"nvim-treesitter/nvim-treesitter",
-		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
-	}
+  use { "nvim-treesitter/nvim-treesitter", run = ':TSUpdate' }
 
   -- Nvim Surroud
   use({
@@ -85,8 +82,13 @@ return require('packer').startup(function(use)
   -- Git
   use { 'lewis6991/gitsigns.nvim' }
 
-  --DiffView
+  -- DiffView
   use { 'sindrets/diffview.nvim' }
+
+  use { 'RRethy/nvim-treesitter-endwise' }
+
+  -- REST
+  use { "rest-nvim/rest.nvim" }
 
   if packer_bootstrap then
     require('packer').sync()
